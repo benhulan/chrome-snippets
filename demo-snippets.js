@@ -1,7 +1,10 @@
+var standupParticipants = ["Ben", "Brad", "Josh", "Michael", "Ricky", "Warner", "Will H", "Zak", "Brenna", "Justin B", "Luke", "Matt", "G", "Spruce", "Justin F", "Nick F", "Jes", "Jared", "Hayden", "Foster", "David Ho.", "Jay", "David Hw.", "Chad", "Austin", "Renee", "Ted", "Ryan", "Jack", "Stephen", "Nick R", "June", "Scott", "Will S", "Michael S", "Teya", "Bryan", "Leif", "Winnie", "Daniel W"];
 function popcorn() {
-  var standupParticipants = ["Ben", "Brad", "Josh", "Michael", "Ricky", "Warner", "Will H", "Zak", "Brenna", "Justin B", "Luke", "Matt", "G", "Spruce", "Justin F", "Nick F", "Jes", "Jared", "Hayden", "Foster", "David Ho..", "Jay", "David Hw...", "Chad", "Austin", "Renee", "Ted", "Ryan", "Jack", "Stephen", "Nick R", "June", "Scott", "Will S", "Michael S", "Teya", "Bryan", "Leif", "Winnie", "Daniel"];
-  let index = Math.ceil(Math.random()*standupParticipants.length);
-  return standupParticipants[index];
+  let cloneData = standupParticipants;
+  let index = Math.ceil(Math.random()*cloneData.length);
+  let nextPerson = cloneData[index];
+  cloneData.splice(index, 1);
+  return nextPerson;
 }
 
 // insert-css.js excerpt from: https://github.com/bgrins/devtools-snippets
