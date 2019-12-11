@@ -26,7 +26,7 @@ function idMaker() {
   return Date.now().toString() + '-' + ('0000' + Math.floor(Math.random()*1000).toString()).substr(-4);
 }
 
-// AWS ids look like this:
+// uuid v4 ids look like this:
 // "eb100210-50f3-11e8-bd25-b79dc8319b70"
 
 function hexMaker(baseTenNumber) {
@@ -48,7 +48,7 @@ function randomMultiDigitHex(digits) {
   return hexMaker(Math.floor(Math.random()*Math.pow(256, digits/2)));
 }
 
-function awsIdMaker() {
+function uuidMaker() {
   let newRandomId = randomMultiDigitHex(8)+'-'+
     randomMultiDigitHex(4)+'-'+
     randomMultiDigitHex(4)+'-'+
